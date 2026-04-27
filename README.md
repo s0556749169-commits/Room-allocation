@@ -1,16 +1,51 @@
-# React + Vite
+SmartRoom - Management System
+A Full-stack application designed for efficient institutional room management, tracking recurring assignments, and handling real-time availability updates.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Overview
+The SmartRoom system provides a centralized solution for managing classroom resources. It allows administrators to define room attributes, manage permanent weekly schedules, and track temporary cancellations to maximize space utilization.
 
-Currently, two official plugins are available:
+Core Features
+Resource Management: Tracking physical room properties such as wing, floor, capacity, and available equipment (e.g., projectors).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Dynamic Scheduling: Managing recurring assignments for courses and lectures with precise day and time slots.
 
-## React Compiler
+Availability Tracking: Handling class cancellations and updates to reflect real-time room status.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Conflict Prevention: Integrated logic to ensure no overlapping assignments occur within the same space.
 
-## Expanding the ESLint configuration
+Database Logic
+The system uses a relational MongoDB structure via Mongoose, centered around three main entities:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Rooms: The core entity containing physical data and references to associated schedules.
+
+Assignments: Defines the permanent weekly occupancy of a room.
+
+Cancellations: Tracks specific instances where a room becomes vacant, allowing for temporary re-assignment.
+
+Technology Stack
+Backend: Node.js & Express.js
+
+Frontend: React.js
+
+Database: MongoDB (Mongoose)
+
+Version Control: Git & GitHub
+
+Installation & Setup
+Clone the repository:
+
+Bash
+git clone [repository-link]
+Install Dependencies:
+Navigate to both the server and client directories and run:
+
+Bash
+npm install
+Environment Configuration:
+Ensure a .env file is created in the server directory with the necessary MongoDB connection string and Port configuration.
+
+Running the Application:
+Start the backend and frontend servers using:
+
+Bash
+npm start
