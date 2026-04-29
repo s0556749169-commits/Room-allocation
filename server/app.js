@@ -9,3 +9,7 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+// דוגמה לנתיב בשרת
+app.get('/api/test', (req, res) => {
+  res.json({ message: "החיבור מקצה לקצה עובד בהצלחה!", status: "success" });
+});
