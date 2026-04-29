@@ -4,7 +4,7 @@ const cors = require('cors');
 
 // --- חיבור למסד נתונים (מקומי לצורך בדיקות) ---
 // ברגע שבת 3 תשלח את הקישור, תחליפי את המחרוזת הזו
-mongoose.connect('mongodb://127.0.0.1:27017/room_project')
+mongoose.connect('mongodb+srv://Yehudit-Arieli:1700707050@seminarrooms.spiiw1i.mongodb.net/?appName=seminarRooms')
   .then(() => console.log('✅ Connected to Local MongoDB'))
   .catch(err => console.error('❌ Connection error:', err));
 // 1. ייבוא המודלים
