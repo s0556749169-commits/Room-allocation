@@ -10,7 +10,7 @@ mongoose.connect('mongodb+srv://Yehudit-Arieli:1700707050@seminarrooms.spiiw1i.m
 // 1. ייבוא המודלים
 const Allocation = require('./models/Allocation'); 
 
-const Allocation = require('./models/Allocation');
+
 const app = express();
 const PORT = 5000;
 
